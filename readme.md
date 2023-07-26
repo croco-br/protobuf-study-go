@@ -9,3 +9,11 @@ go install github.com/ktr0731/evans@latest
 #generate
 
 make generate
+
+#run
+
+make run
+
+#test grpc calls (with evans installed on GOPATH)
+
+evans -r repl

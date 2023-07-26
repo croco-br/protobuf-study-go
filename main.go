@@ -21,6 +21,9 @@ func main() {
 
 	defer db.Close()
 
+	_, err = db.Exec("CREATE TABLE users (id TEXT PRIMARY KEY, name TEXT, email TEXT);")
+	_, err = db.Exec("CREATE TABLE accounts (id TEXT PRIMARY KEY, number TEXT);")
+
 	userDb := database.NewUser(db)
 	userService := service.NewUserService(*userDb)
 
